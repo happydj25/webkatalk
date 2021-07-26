@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" media="all">
+    <link rel="stylesheet" href="./css/font.css" media="all">
+
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+
+    <div class="container">
+
+        <section class="join class__hidden">                
+            <h1>웹카오톡 회원가입</h1>
+            <form>
+                <div class="form-group">
+                    <label for="inputNickname">닉네임</label>
+                    <input type="text" class="form-control" id="inputNickname" placeholder="닉네임을 입력하세요">
+                </div>
+
+                
+                
+                <div class="form-group">       
+                    <label for="exampleInputEmail1">이메일 주소</label>             
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="이메일을 입력해 주세요">
+                    <p class="text-danger">올바른 이메일을 입력해주세요</p>
+                    <button type="submit" class="btn btn-default">인증번호 보내기</button>
+                </div>
+
+
+
+                <div class="form-group">      
+                    <label for="exampleInputEmail1">이메일 인증번호</label>          
+                    <input type="email" class="form-control" id="InputEmailAccreditation" placeholder="이메일로 발송된 인증번호를 입력해 주세요">
+                    <p class="text-danger">입력하신 인증번호가 정확하지 않습니다.</p>
+                    <button type="submit" class="btn btn-default">인증번호 확인</button>
+                </div>
+                
+                
+                <div class="form-group">
+                    <label for="exampleInputPassword1">비밀번호</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="비밀번호를 입력해 주세요">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">비밀번호 확인</label>
+                    <input type="password" class="form-control" id="exampleInputPassword2" placeholder="비밀번호를 다시 입력해 주세요">
+                    <p class="text-danger">입력하신 비밀번호가 정확하지 않습니다</p>
+                </div>
+                <div class="form-group">
+                    <label for="inputNickname">생년월일</label>
+                    <input type="text" class="form-control" id="inputNickname" placeholder="생년월일을 입력해 주세요 ex) 19940203">
+                </div>
+                <div class="checkbox">
+                    <label>
+                    <input type="checkbox"> 남자
+                    </label>
+                    <label>
+                    <input type="checkbox"> 여자
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-default">제출</button>
+            </form>
+        </section>
+
+
+        <section class="login class__hidden">
+            <h1>웹카오톡</h1>
+            <form>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="inputNickname" placeholder="이메일">
+                </div>
+                
+                <div class="form-group">
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="비밀번호">
+                </div>
+                <div class="checkbox">
+                    <label>
+                    <input type="checkbox"> 아이디 저장하기
+                    </label>
+                    | <a href="">비밀번호 찾기</a> | <a href="">회원가입</a>
+                </div>
+                <button type="submit" class="btn btn-default">로그인</button>
+            </form>
+        </section>
+
+        <section class="chat_list">
+
+            <ul>
+                <li>
+                    <div class="icon"></div>
+                    <div class="txt">
+                        <p>
+                            <strong>부패를 얼마나 돋고, 어디 것이다. 거선의 목숨을 끝까지 봄바람이다.</strong>
+                            <span class="time">오후 10:03</span>
+                        </p>                        
+                        <span>부패를 얼마나 돋고, 어디 것이다. 거선의 목숨을 끝까지 봄바람이다.</span>                        
+                    </div>
+                </li>
+            </ul>
+
+        </section>
+        
+
+    </div>
+
+
+
+    <script src="http://code.jquery.com/jquery-1.9.0.js"></script> 
+    <script src="https://code.jquery.com/jquery-migrate-3.3.0.min.js"></script>
+
+</body>
+</html>
