@@ -252,3 +252,182 @@ span{line-height: 100%;}
     cursor: pointer;
   }
 
+  nav ul li:hover {
+    opacity: .5;
+  }
+
+  section {
+      min-height: 100hv;
+  }
+
+  .container>section {
+    margin-bottom: 100px;
+  }
+
+
+  .randomchat {
+    height: 100%;   
+       
+  }
+
+  .wait .box {
+      height: 200px;
+  }
+
+  .wait button {
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      background: #ccc;
+      color: #000;
+      border-radius: 5px;
+  }
+
+
+
+  .select-group {
+      display: flex;
+  }
+
+  .select-group span {
+    padding: 0 10px;
+    line-height: 33px;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .chat_view .tit {
+      display: flex;
+      height: 50px;
+      line-height: 50px;
+      border-bottom: 1px solid #000;
+  }
+
+  .chat_view .tit .back_btn,
+  .chat_view .tit .menu {
+      width: 50px;
+      display: inline-block;
+  }
+  .chat_view .tit p {
+      line-height: 50px;
+  }
+  .chat_view .tit .menu {
+      margin-left: auto;
+  }
+
+  .chat_view li {
+    display: flex;
+    margin: 20px 100px 20px 0;
+  }
+  .chat_view li.my {
+    margin: 10px 0 10px 100px;    
+  }
+  .chat_view li .txt {
+    position: relative;
+      border-radius: 10px;
+      background: pink;
+      padding: 5px 10px;
+  }
+
+  .chat_view li .txt .time {
+    position: absolute;
+    bottom: 0;
+    right: -80px;
+  }
+
+  .chat_view li.my .txt .time {
+    position: absolute;
+    bottom: 0;
+    left: -80px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* -------------- loader6 로딩모션 -------------- */
+
+.loader6{
+    position: relative;
+    width: 12px;
+    height: 12px;
+  
+    top: 46%;
+    top: -webkit-calc(50% - 6px);
+    top: calc(50% - 6px);
+    left: 46%;
+    left: -webkit-calc(50% - 6px);
+    left: calc(50% - 6px);
+    
+    border-radius: 12px;
+    /* background-color: #fff; */
+    background-color: #e74c3c;
+    -webkit-transform-origin:  50% 50%;
+        transform-origin:  50% 50% ;
+    -webkit-animation: loader6 1s ease-in-out infinite;
+        animation: loader6 1s ease-in-out infinite;
+  }
+  
+  .loader6:before{
+    content: "";
+    position: absolute;
+    /* background-color: rgba(255, 255, 255, .5); */
+    background-color: #e74c3c;
+    top: 0px;
+    left: -25px;
+    height: 12px;
+    width: 12px;
+    border-radius: 12px;
+  }
+  
+  .loader6:after{
+    content: "";
+    position: absolute;
+    /* background-color: rgba(255, 255 ,255 ,.5); */
+    background-color: #e74c3c;
+    top: 0px;
+    left: 25px;
+    height: 12px;
+    width: 12px;
+    border-radius: 12px;
+  }
+  
+  
+  @-webkit-keyframes loader6{
+      0%{-webkit-transform:rotate(0deg);}
+      50%{-webkit-transform:rotate(180deg);}
+      100%{-webkit-transform:rotate(180deg);}
+  }
+  
+  @keyframes loader6{
+      0%{transform:rotate(0deg);}
+      50%{transform:rotate(180deg);}
+      100%{transform:rotate(180deg);}
+  }
+  

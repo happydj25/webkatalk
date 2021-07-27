@@ -15,13 +15,34 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
     <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>   
+    
 </head>
 <body>
 
 
 
     <div class="container">
+
+        <section class="login class__hidden">
+            <h1>랜덤채팅</h1>
+            <form>
+                <div class="form-group">
+                    <label for="inputLoginId">아이디</label>
+                    <input type="text" class="form-control" id="inputLoginId" placeholder="아이디">
+                </div>
+            
+                <div class="form-group">
+                    <label for="inputLoginPw">비밀번호</label>
+                    <input type="password" class="form-control" id="inputLoginPw" placeholder="비밀번호">
+                </div>
+                <p><a href="">비밀번호 찾기</a> | <a href="">회원가입</a></p>                  
+                <button type="submit" class="btn btn-default">로그인</button>
+            </form>
+
+
+        </section>
 
         <section class="join class__hidden">                
             <h1>웹카오톡 회원가입</h1>
@@ -63,20 +84,23 @@
                     <label for="inputNickname">생년월일</label>
                     <input type="text" class="form-control" id="inputNickname" placeholder="생년월일을 입력해 주세요 ex) 19940203">
                 </div>
-                <div class="checkbox">
-                    <label>
-                    <input type="checkbox"> 남자
-                    </label>
-                    <label>
-                    <input type="checkbox"> 여자
-                    </label>
-                </div>
+                <div class="form-group">
+                    <label>성별</label>
+                    <div class="checkbox">
+                        <label>
+                        <input type="checkbox"> 남자
+                        </label>
+                        <label>
+                        <input type="checkbox"> 여자
+                        </label>
+                    </div>
+                </div>                
                 <button type="submit" class="btn btn-default">제출</button>
             </form>
         </section>
 
 
-        <section class="login class__hidden">
+        <section class=" login class__hidden">
             <h1>웹카오톡</h1>
             <form>
                 <div class="form-group">
@@ -97,7 +121,7 @@
         </section>
 
         <!-- 친구목록 -->
-        <section id="friends" class="chat_list friends_list">
+        <section id="friends" class=" chat_list friends_list class__hidden">
             <ul>
                 <li>
                     <div class="icon"></div>
@@ -211,7 +235,8 @@
 
         </section>
 
-        <section id="chat" class="chat_list">
+        <!-- 채팅리스트 -->
+        <section id="chat" class=" chat_list class__hidden">
 
             <ul>
                 <li>
@@ -337,41 +362,124 @@
 
         </section>
 
-        <section id="randomchat">
-            랜덤채팅
+        <!-- 채팅 뷰 -->
+        <section id="chat_view" class="chat_view">     
+            <div class="tit">
+                <button type="button" class="back_btn">
+                    <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                </button>
+                <p>김원숭이</p>
+                <button type="button" class="menu">
+                    <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span><br>            
+                </button>
+            </div>      
+            <ul>
+                <li>
+                    <div class="txt">
+                        님 뭐하세용??
+                        <span class="time">오전 11:23</span>
+                    </div>
+                    
+                </li>
+                <li class="my">
+                    <div class="txt">
+                        저 이제 밥먹어요 닭백숙이랑 열무김치 호로로록 먹고 소금도 탁 찍어먹으려구염 맛잇겠죠? 드시고싶죠?
+                        <span class="time">오전 11:23</span>                
+                    </div>
+                    
+                </li>
+            </ul>
+
         </section>
 
-        <nav>
-            <ul>
-                <li data-menu="friends">친구목록</li>
-                <li data-menu="chat">채팅</li>
-                <li data-menu="randomchat">랜덤채팅</li>
-                <li data-menu="mypage">마이페이지</li>
-            </ul>
-        </nav>
+        <section id="randomchat" class=" randomchat">
+            <h1>랜덤채팅</h1>
+
+
+            <div class="random_settings">
+                <form>                    
+                    <div class="form-group">
+                        <label>매칭될 성별 선택</label>
+                        <div class="checkbox">
+                            <label><input type="checkbox"> 남자</label>
+                            <label><input type="checkbox"> 여자</label>
+                        </div>
+
+                    </div>
+                    
+
+                    <div class="form-group">
+                        <label>매칭될 연령대 선택</label>
+                        <div class="select-group">
+                            <select name="" id="" class="form-control" aria-placeholder="시작년도">
+                                <option value="">랜덤</option>
+                                <option value="">1990</option>
+                            </select>
+                            <span>~</span>
+                            <select name="" id="" class="form-control" aria-placeholder="끝년도">
+                                <option value="">랜덤</option>
+                                <option value="">1990</option>
+                            </select>
+                        </div>
+                        
+                    </div>
+
+                    <button type="submit" class="btn btn-default">랜덤채팅 시작하기</button>
+                </form>
+            </div>
+
+            <!-- 매칭 전 대기화면 -->
+            <div class="wait class__hidden">
+                <h3>대화상대를 매칭중 입니다.</h3>
+                <div class="box">
+                    <div class="loader6"></div>
+                </div>
+                <button type="button">취소하기</button>
+            </div>
+            
+        </section>      
         
 
     </div>
 
+    <!-- 하단 메뉴 -->
+    <nav>
+        <ul class="quick_menu">
+            <li data-menu="friends">
+                <span class="glyphicon glyphicon-star" aria-hidden="true"></span><br>
+                친구목록
+            </li>
+            <li data-menu="chat">
+                <span class="glyphicon glyphicon-globe" aria-hidden="true"></span><br>
+                채팅
+            </li>
+            <li data-menu="randomchat">
+                <span class="glyphicon glyphicon-send" aria-hidden="true"></span><br>
+                랜덤채팅
+            </li>
+            <li data-menu="mypage">
+                <span class="glyphicon glyphicon-user" aria-hidden="true"></span><br>
+                마이페이지
+            </li>
+        </ul>
+    </nav>
+                                                                                    
 
+    <script type="text/javascript">
 
-    <script>
-         $(".nav li").off("click").on("click", function() {
-            let clickedTabId = $(this).data("menu");
-            let activeTabobj  = '#'+$('.container>section').attr('id');
-            $('.container>section').removeClass('class__hidden');
-
-            if(clickedTabId != activeTabobj) {
-                $(clickedTabId).addClass("class__hidden");               
-            }
+        $('.quick_menu li').click(function(){
+            const clickedTabId = '#' + $(this).data("menu");
+            $(clickedTabId).siblings().hide();
+            $(clickedTabId).show();
         });
+   
 
     </script>
 
 
-
-    <script src="http://code.jquery.com/jquery-1.9.0.js"></script> 
-    <script src="https://code.jquery.com/jquery-migrate-3.3.0.min.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.0.js"></script> 
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-3.3.0.min.js"></script>
 
 </body>
 </html>
